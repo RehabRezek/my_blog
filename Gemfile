@@ -32,6 +32,15 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# make errors better looking
+gem 'better_errors','~> 2.4'
+
+# CSS
+gem 'bulma-rails', '~> 0.6.2'
+# simple form
+gem 'simple_form', '~> 3.5', '>= 3.5.1'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -39,6 +48,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  #Guard is a command line tool to easily handle events on file system modifications
+  gem 'guard', '~> 2.14', '>= 2.14.2'
+  #Guard::LiveReload automatically reloads your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
 
 group :development do
