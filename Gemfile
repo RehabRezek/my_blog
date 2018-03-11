@@ -39,6 +39,8 @@ gem 'better_errors','~> 2.4'
 gem 'bulma-rails', '~> 0.6.2'
 # simple form
 gem 'simple_form', '~> 3.5', '>= 3.5.1'
+# devise
+gem 'devise', '~> 4.4', '>= 4.4.1'
 
 
 

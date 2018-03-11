@@ -9,6 +9,12 @@
   </head>
 
   <body>
+
+  	<% if !user_signed_in? %>
+  	<p class="sign_in"><%= link_to "Login", new_user_session_path %> </p>
+  	<% end %>
+
+   <% if user_signed_in? %>
   	<section class="hero is-primary is-medium">
 	  <!-- Hero head: will stick at the top -->
 	  <div class="hero-head">
@@ -27,6 +33,11 @@
 	            <%= link_to "Create New Post", new_post_path, class:"navbar-item" %>
 	          </div>
 	        </div>
+	        <div id="navbarMenuHeroA" class="navbar-menu">
+	          <div class="navbar-end">
+	            <%= link_to "Log Out", destroy_user_session_path, class:"navbar-item" %>
+	          </div>
+	        </div>
 	      </div>
 	    </nav>
 	  </div>
@@ -39,7 +50,10 @@
 	      </h1>
 	    </div>
 	  </div>
-	</section>
+</section>
+<% end %>
+	<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
