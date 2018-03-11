@@ -3,8 +3,9 @@
   <head>
     <title>DemoBlog</title>
     <%= csrf_meta_tags %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -35,7 +36,7 @@
 	        </div>
 	        <div id="navbarMenuHeroA" class="navbar-menu">
 	          <div class="navbar-end">
-	            <%= link_to "Log Out", destroy_user_session_path, class:"navbar-item" %>
+	            <%= link_to "Log Out", destroy_user_session_path, :method => :delete , class:"navbar-item" %>
 	          </div>
 	        </div>
 	      </div>
@@ -55,5 +56,6 @@
 	<p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
+
   </body>
 </html>

@@ -7,9 +7,11 @@
           <%= comment.comment %>
         </p>
       </div>
+      <% if user_signed_in? %>
     </div>
      <%= link_to 'Delete', [comment.post, comment],
                   method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
+                  <%end%>
   </article>
 
 </div>
