@@ -1,6 +1,6 @@
 <div style="padding-top:100px; text-align: center; padding-left: 100px; width:700px; height:700px; ">
 <h2>Log in</h2>
-<form>
+
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   
@@ -13,6 +13,6 @@
     <%= f.button :submit, "Log in" %>
   
 <% end %>
-</form>
+
 <%= render "devise/shared/links" %>
 </div>
