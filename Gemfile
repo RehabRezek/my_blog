@@ -41,7 +41,8 @@ gem 'bulma-rails', '~> 0.6.2'
 gem 'simple_form', '~> 3.5', '>= 3.5.1'
 # devise
 gem 'devise', '~> 4.4', '>= 4.4.1'
-
+gem "bootstrap-sass", "2.3.1.0"
+gem 'autoprefixer-rails'
 
 
 group :development, :test do
